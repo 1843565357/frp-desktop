@@ -1,0 +1,92 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+package-lock.json
+node_modules/
+
+# --- Tauri / Rust ---
+# Rust 构建目录
+/target
+src-tauri/target/
+
+# Cargo 构建缓存
+**/*.rlib
+**/*.rmeta
+
+# Tauri 打包产物（极易超大，务必忽略）
+src-tauri/*.app
+src-tauri/*.dmg
+src-tauri/*.msi
+src-tauri/*.deb
+src-tauri/*.rpm
+src-tauri/*.AppImage
+src-tauri/*.exe
+src-tauri/**/*.zip
+src-tauri/**/*.7z
+src-tauri/target/release/bundle/
+
+# 常见调试/符号文件
+**/*.pdb
+**/*.dSYM
+
+# --- Node / 前端 ---
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+dist/
+build/
+.out/
+.outdir/
+.vite/
+.next/
+.svelte-kit/
+.angular/
+.cache/
+.temp/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- 环境与本机配置 ---
+.env
+.env.*
+*.local
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- 归档/临时/大文件 ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.bak
+*.tmp
+*.swp

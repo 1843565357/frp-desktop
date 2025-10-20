@@ -1,0 +1,119 @@
+/* left-menu.css */
+$main-bg: #f3f3f3;
+$primary-color: #5f3bb0; /* 选中颜色*/
+
+.main-container {
+  background: $main-bg;
+  width: calc(100% - 60px);
+  height: 100vh;
+  padding: 15px;
+
+  .main {
+    height: 100%;
+    width: 100%;
+    //overflow: hidden;a
+  }
+
+  .app-container-breadcrumb {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 16px 24px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 15px;
+
+    .breadcrumb-left {
+      color: $primary-color;
+      font-size: 36px;
+      height: 32px;
+
+      svg {
+        vertical-align: top;
+      }
+
+      span {
+        vertical-align: top;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        //transform: translateY(5px);
+        display: inline-block;
+      }
+    }
+  }
+
+  .download {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .download-compont {
+    background-color: #fff;
+  }
+  .container::-webkit-scrollbar-track {
+    background: #f5f5f5; /* 和容器一致 */
+  }
+}
+
+.lm-container {
+  background: #fff;
+  width: 60px;
+  height: 100vh;
+  display: flex; /* 设置为 flexbox */
+  flex-direction: column; /* 纵向排列子元素 */
+
+  .lm-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .lm-item {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: #1f2937; /* gray-800 */
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .lm-item.is-active {
+    background: #ebe6f7; /* indigo-50 */
+    color: $primary-color;
+  }
+  .lm-icon {
+    display: flex;
+    width: 22px;
+    height: 22px;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lm-item:hover,
+  .lm-item:focus,
+  .lm-item:active {
+    color: $primary-color;
+    cursor: pointer;
+
+    & > svg {
+      animation: swing 0.5s;
+    }
+  }
+}
+
+.logo-container {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    width: 60%;
+  }
+}
