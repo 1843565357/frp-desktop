@@ -25,13 +25,13 @@ export const Download = () => {
             className="w-[400px] h-[150px] shadow-lg rounded-lg download-compont flex"
             key={release.id}
           >
-            <div className="w-[300px] ">
+            <div className="w-[300px] flex flex-col justify-center p-3">
               <div>{release.name}</div>
               <div>{release.asset.size}</div>
               <div>下载数:{release.asset.download_count}</div>
               <div>发布时间:{release.publishedAt}</div>
             </div>
-            <div className="flex-1 ">
+            <div className="flex-1 flex items-center">
               <Button>下载</Button>
             </div>
           </div>
