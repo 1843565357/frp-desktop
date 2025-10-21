@@ -5,7 +5,7 @@ import { useFrpReleases } from "../../hooks/useFrpReleases";
 import { MyCard } from "../../components/MyCard";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 
 export const Download = () => {
   const { platform, arch, frpSuffix } = useContext(GlobalContext);
@@ -20,12 +20,20 @@ export const Download = () => {
         <a></a>
       </Breadcrumb>
       <div className="app-container-breadcrumb download">
-        {[...Array(20)].map((_, i) => (
+        {releases.map((release) => (
           <div
-            className="w-[400px] h-24 shadow-lg rounded-lg download-compont"
-            key={i + 1}
+            className="w-[400px] h-[150px] shadow-lg rounded-lg download-compont flex"
+            key={release.id}
           >
-            <p className="font-sans ...">{i + 1}</p>
+            <div className="w-[300px] ">
+              <div>{release.name}</div>
+              <div>{release.asset.size}</div>
+              <div>下载数:{release.asset.download_count}</div>
+              <div>发布时间:{release.publishedAt}</div>
+            </div>
+            <div className="flex-1 ">
+              <Button>下载</Button>
+            </div>
           </div>
         ))}
       </div>
