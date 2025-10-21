@@ -6,6 +6,7 @@ import { MyCard } from "../../components/MyCard";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { Button, Grid } from "@mui/material";
+import { bytesToMB } from "../../utils/convert";
 
 export const Download = () => {
   const { platform, arch, frpSuffix } = useContext(GlobalContext);
@@ -27,7 +28,7 @@ export const Download = () => {
           >
             <div className="w-[300px] flex flex-col justify-center p-3">
               <div>{release.name}</div>
-              <div>{release.asset.size}</div>
+              <div>{bytesToMB(release.asset.size)} MB</div>
               <div>下载数:{release.asset.download_count}</div>
               <div>发布时间:{release.publishedAt}</div>
             </div>
